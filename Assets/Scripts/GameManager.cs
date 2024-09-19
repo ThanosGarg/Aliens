@@ -12,11 +12,11 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // Start the coroutine to print the message every interval
-        StartCoroutine(PrintMessageEveryXSeconds());
+        StartCoroutine(SpawnCometEveryXSeconds());
     }
 
     // Coroutine to print message at regular intervals
-    IEnumerator PrintMessageEveryXSeconds()
+    IEnumerator SpawnCometEveryXSeconds()
     {
         while (true)
         {

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SpaceShipController : MonoBehaviour
@@ -16,6 +17,21 @@ public class SpaceShipController : MonoBehaviour
 
         // Apply movement to the GameObject
         transform.Translate(movement * moveSpeed * Time.deltaTime);
+    }
+
+    void OnCollisionEnter()
+    {
+        Debug.Log("Boom");
+
+        StartCoroutine(WaitToDestroy());
+    }
+
+
+    public IEnumerator WaitToDestroy()
+    {
+        yield return new WaitForSeconds(2);
+
+        Destroy(gameObject);
     }
 }
 
