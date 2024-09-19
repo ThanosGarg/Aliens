@@ -12,4 +12,9 @@ public class CometController : MonoBehaviour
         // Move the object in the specified direction
         transform.Translate(direction * speed * Time.deltaTime);
     }
+
+    void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
 }
