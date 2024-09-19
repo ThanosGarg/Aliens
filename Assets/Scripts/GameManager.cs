@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-  public  GameObject CometePrefab;
+    public GameObject CometePrefab;
     // Time interval in seconds
     public float interval = 2f;
 
@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
 
             // Wait for the specified interval
             yield return new WaitForSeconds(interval);
+
+            //....
         }
     }
 
