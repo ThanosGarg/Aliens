@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class CometController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float speed = 5f;  // Speed of movement
+    public Vector3 direction = Vector3.forward;  // Direction to move (in this case, forward)
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // Move the object in the specified direction
+        transform.Translate(direction * speed * Time.deltaTime);
     }
 }
