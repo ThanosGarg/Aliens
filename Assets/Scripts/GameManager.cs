@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
             // Wait for the specified interval
             yield return new WaitForSeconds(interval);
 
-            //....
+            Instantiate(CometePrefab);
         }
     }
 
